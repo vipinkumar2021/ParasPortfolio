@@ -1,5 +1,7 @@
 var mongoose = require('mongoose');
-var uri = 'mongodb+srv://paras1:paras1093@clusterparas1.bbm5p.mongodb.net/parasportfoliodatabase?retryWrites=true&w=majority'
+require('dotenv').config();
+var uri = process.env.URI;
+
 
 mongoose.connect(uri, {useNewUrlParser: true, useUnifiedTopology: true, /*useFindAndModify: false,
 useCreateIndex: true*/});
