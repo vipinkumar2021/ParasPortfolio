@@ -6,9 +6,12 @@
   </head>
   <body>
     <h1>Paras Portfolio</h1>
-    <form>
+    <% if(msg != '') { %>
+      <h1><%= msg %></h1>
+   <% } %>
+    <form action="/contactus" method="post" role="form">
       <label>Name</label><br/>
-      <input name="name" type="text" placeholder="Write Name..."/><br/>
+      <input name="name" type="text" placeholder="Write Name..." required/><br/>
       <label>Mobile</label><br/>
       <input name="mobilenumber" type="number" placeholder="Write Mobile Number..."/><br/>
       <label>Email</label><br/>
