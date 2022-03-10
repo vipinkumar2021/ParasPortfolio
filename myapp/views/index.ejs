@@ -5,6 +5,15 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>      
+        <li><a href="/about">About</a></li>
+        <li><a href="/services">Services</a></li>
+        <li><a href="/products">Products</a></li>
+      </ul>
+    </nav>
+    
     <h1>Paras Portfolio</h1>
     <% if(msg != '') { %>
       <h1><%= msg %></h1>
@@ -41,5 +50,28 @@
       <input name="confirmpassword" type="password" placeholder="Cofirm Password....." /><br/>
       <input type="submit" value="Sign Up"/>
     </form>
+
+    <h2>Add Product</h2>
+    <form action="/addproduct" method="post" role="form">
+      <label>Choose Product Category</label><br/>
+      <select name="productcategory" id="cars">
+        <option value="Bus">Bus</option>
+        <option value="Car">Car</option>
+        <option value="Bike">Bike</option>
+        <option value="Scooty">Scooty</option>
+      </select>
+<br/>
+      <label>Product Name</label><br/>
+      <input name="productname" type="text" placeholder="Enter Product Name..."/><br/>
+      
+      <label>Product Price</label><br/>
+      <input name="productprice" type="number" placeholder="Enter Product Price..."/><br/>
+
+      <label>Product Year</label><br/>
+      <input name="productyear" type="date" placeholder="Enter Product Year..."/><br/>
+
+      <input type="submit" value="Add Product"/>
+    </form>
+    
   </body>
 </html>
